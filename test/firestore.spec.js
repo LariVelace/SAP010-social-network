@@ -36,7 +36,7 @@ describe('posts', () => {
             uidUser: currentUser.uid,
             date: timestamp,
             textPost: postagem,
-            like: []
+            whoLiked: []
         };
         await posts(postagem);
         expect(collection).toHaveBeenCalledWith(db, 'posts');
